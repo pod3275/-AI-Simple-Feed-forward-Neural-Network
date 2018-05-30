@@ -193,8 +193,41 @@
  
 -----------------------------------------------
 ### (3) Detect digits neural network
+ - 출력 형식
+   - Training 시작 시 iteration 횟수 출력.
+   - 결과는 output의 범위에 따라 0 또는 1을 저장. 또한 output[k] =1에 해당하는 값 출력.
+   - 작성 코드
+   
+   ![image](https://user-images.githubusercontent.com/26705935/40694811-20599c16-63f9-11e8-812d-4075fa6bd557.png)
+
  - 실행 결과
- 
- 
+   - iteration 횟수(MAX_EPOCH)를 달리하여 결과를 출력하였다.
+   - MAX_EPOCH = 1000
+   
+   ![image](https://user-images.githubusercontent.com/26705935/40694880-91d5c72a-63f9-11e8-9af4-10f663b26465.png)
+   
+   - MAX_EPOCH = 10000
+   
+   ![image](https://user-images.githubusercontent.com/26705935/40694887-9c9704c6-63f9-11e8-8bc2-4c171a72016f.png)
+   
+   - MAX_EPOCH = 50000
+   
+   ![image](https://user-images.githubusercontent.com/26705935/40694895-a2bd374e-63f9-11e8-9c74-fa16fe84300f.png)
+   
+   - MAX_EPOCH = 100000
+   
+   ![image](https://user-images.githubusercontent.com/26705935/40694901-a87a216a-63f9-11e8-9caa-bc1606c339ad.png)
+   
+   - MAX_EPOCH = 500000
+   
+   ![image](https://user-images.githubusercontent.com/26705935/40694910-b0d719b2-63f9-11e8-80a6-bb554b1d2563.png)
+   
+ - 분석
+   - 실행 결과 iteration 50000회를 기점으로 성능이 변화한다. 1000회부터 50000회 iteration까지 정확도가 증가하다가 50000회 이상 iteration에서의 정확도는 크게 증가하지 않고, 오히려 감소하기도 하였다. 이는 iteration 횟수가 높을수록 모델의 성능이 좋아지는 것은 아니라는 것임을 나타낸다.
+
+   - 모델의 정확도를 증가시키기 위해서는 가장 효율적인 iteration 횟수를 정하는 것이 중요하다. 또한 hidden layer의 node수, layer의 수 등 모델의 하이퍼파라미터는 성능을 결정하는 중요한 요소이기 때문에 가장 효율적인 하이퍼파라미터를 찾는 것도 중요하다. 
+
+   - 매 실행마다 initial weight이 다르기 때문에 결과가 달라지고, 매 실행 마다 더 정확해지기도 또는 부정확해지기도 하였다. 따라서 initial weight을 성능이 좋을 것이라고 어느 정도 예측한 값으로 설정한다면 매 실행마다 결과가 크게 달라지지 않을 것으로 예상된다.
+      
 ## 4. Future work
- - 
+ - C++을 이용하여 간단한 Neural Network를 구성해보았다. C++ 언어가 아닌 python의 tensorflow등 다양한 딥러닝 라이브러리를 이용하여 많은 neural network를 구현할 예정이다.
