@@ -1,6 +1,8 @@
 # Simple-Feed-forward-Neural-Network
  - 2017년 1학기 성균관대학교 이지형 교수님 인공지능 수업 3번째 과제
- - 간단한 feed-forward neural network 코드를 이용하여 training 및 test를 실행하는 과제.
+ - 간단한 feed-forward neural network 코드를 이용하여 특정 데이터를 training 및 test를 실행하는 과제
+ - 2017 1st semester Sungkyunkwan University professor Jee Hyong Lee's Artificial Intelligence class, 3rd assignment
+ - Train and test specific data using simple feed-forward neural network code
 
 ## 1. Problem
  - Simple feed-forward neural network의 구조 (코드 내 파라미터)
